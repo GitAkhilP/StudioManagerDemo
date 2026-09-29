@@ -1,0 +1,143 @@
+.clockCard {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+  border: 1px solid rgba(211, 242, 233, 0.16);
+  border-radius: 8px;
+  background:
+    linear-gradient(135deg, rgba(24, 72, 68, 0.8), rgba(55, 31, 57, 0.9)),
+    rgba(28, 31, 34, 0.96);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.compact {
+  width: min(100%, 34rem);
+  padding: 1.25rem;
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.kicker {
+  color: #9fe4d4;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.header h2 {
+  margin-top: 0.15rem;
+  color: #fff;
+  font-size: 1.2rem;
+  line-height: 1.2;
+}
+
+.statusPill {
+  flex: 0 0 auto;
+  padding: 0.35rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.74rem;
+  font-weight: 800;
+}
+
+.statusOn {
+  background: rgba(16, 185, 129, 0.16);
+  color: #b7f7df;
+}
+
+.statusOff {
+  background: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.clockButton {
+  min-height: 3.6rem;
+  width: 100%;
+  border: 0;
+  border-radius: 8px;
+  color: #101615;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 900;
+  transition: filter 0.2s ease, transform 0.2s ease;
+}
+
+.clockButton:hover:not(:disabled) {
+  filter: brightness(1.06);
+  transform: translateY(-2px);
+}
+
+.clockButton:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+.clockIn {
+  background: #9fe4d4;
+}
+
+.clockOut {
+  background: #fda4af;
+}
+
+.feedback,
+.error,
+.shiftMeta {
+  font-size: 0.86rem;
+}
+
+.feedback {
+  color: #b7f7df;
+}
+
+.error {
+  color: #fecaca;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.statsGrid div {
+  min-width: 0;
+  padding: 0.75rem;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.statsGrid dt {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.statsGrid dd {
+  margin-top: 0.18rem;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 800;
+}
+
+.shiftMeta {
+  color: rgba(255, 255, 255, 0.68);
+}
+
+@media (max-width: 520px) {
+  .header {
+    flex-direction: column;
+  }
+
+  .statsGrid {
+    grid-template-columns: 1fr;
+  }
+}

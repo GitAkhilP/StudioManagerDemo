@@ -1,0 +1,25 @@
+.sidebarItem {
+  padding: 0.75rem;
+  cursor: pointer;
+  transition: all 0.35s ease;
+  transform-origin: left;
+  display: flex;
+  caret-color: transparent;
+  border-radius: 1rem;
+}
+
+label {
+  cursor: pointer;
+}
+
+.sidebarItem:hover {
+  background: radial-gradient(
+    circle at bottom left,
+    rgba(226, 152, 133, 0.15),
+    rgba(79, 8, 107, 0.9)
+  );
+  opacity: 0.75;
+  transform: scale(1.07);
+  padding-left: 2.75rem;
+  filter: brightness(2);
+}

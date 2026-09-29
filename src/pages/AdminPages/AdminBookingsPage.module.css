@@ -1,0 +1,345 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  height: 100%;
+  min-height: 0;
+  min-width: 0;
+  overflow: auto;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.eyebrow {
+  margin: 0 0 0.25rem;
+  color: #f9a8d4;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.title {
+  margin: 0;
+  font-size: 1.45rem;
+  font-weight: 800;
+}
+
+.summaryGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(6.2rem, 1fr));
+  gap: 0.75rem;
+  min-width: min(100%, 22rem);
+}
+
+.summaryTile {
+  min-width: 0;
+  padding: 0.75rem 1rem;
+  border: 1px solid rgba(249, 168, 212, 0.16);
+  border-radius: 8px;
+  background: radial-gradient(
+    circle at top left,
+    rgba(226, 152, 133, 0.18),
+    rgba(79, 8, 107, 0.72)
+  );
+}
+
+.summaryTile span,
+.summaryTile small {
+  display: block;
+}
+
+.summaryTile span {
+  font-size: 1.15rem;
+  font-weight: 800;
+}
+
+.summaryTile small {
+  margin-top: 0.1rem;
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 0.74rem;
+}
+
+.filterBar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  padding: 0.7rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.06);
+}
+
+.filterButton,
+.actions button {
+  border: 0;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+  transition: background-color 0.18s ease-out, border-color 0.18s ease-out,
+    color 0.18s ease-out, filter 0.18s ease-out, transform 0.18s ease-out;
+}
+
+.filterButton {
+  min-height: 2rem;
+  padding: 0.4rem 0.7rem;
+  border: 1px solid rgba(244, 114, 182, 0.22);
+  border-radius: 999px;
+  background-color: rgba(0, 0, 0, 0.2);
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 0.82rem;
+}
+
+.filterButton:hover,
+.activeFilter {
+  border-color: rgba(251, 113, 133, 0.72);
+  background-color: rgba(151, 5, 127, 0.62);
+  color: #fff;
+}
+
+.feedback {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.message,
+.error {
+  margin: 0;
+  font-size: 0.85rem;
+}
+
+.message {
+  color: #bbf7d0;
+}
+
+.error {
+  color: #fecaca;
+}
+
+.bookingList {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 0.85rem;
+  min-height: 0;
+}
+
+.bookingCard,
+.emptyState {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  background-color: rgba(0, 0, 0, 0.18);
+}
+
+.bookingCard {
+  padding: 1rem;
+}
+
+.emptyState {
+  padding: 1rem;
+  color: rgba(255, 255, 255, 0.68);
+}
+
+.bookingTop {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.memberName {
+  display: block;
+  color: #fbcfe8;
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.bookingTop h2 {
+  margin: 0.15rem 0 0;
+  font-size: 1.05rem;
+  font-weight: 800;
+}
+
+.bookingTop p {
+  margin: 0.25rem 0 0;
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 0.84rem;
+}
+
+.statusBadge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  min-height: 1.7rem;
+  padding: 0.2rem 0.65rem;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  font-size: 0.74rem;
+  font-weight: 800;
+}
+
+.confirmed {
+  color: #bbf7d0;
+  background-color: rgba(34, 197, 94, 0.14);
+  border-color: rgba(34, 197, 94, 0.35);
+}
+
+.requested {
+  color: #fde68a;
+  background-color: rgba(234, 179, 8, 0.14);
+  border-color: rgba(234, 179, 8, 0.35);
+}
+
+.completed {
+  color: #bae6fd;
+  background-color: rgba(14, 165, 233, 0.14);
+  border-color: rgba(14, 165, 233, 0.32);
+}
+
+.canceled {
+  color: #fecaca;
+  background-color: rgba(248, 113, 113, 0.13);
+  border-color: rgba(248, 113, 113, 0.32);
+}
+
+.scheduleStrip {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.5rem;
+  margin: 0.85rem 0;
+}
+
+.scheduleStrip span {
+  min-width: 0;
+  padding: 0.45rem 0.55rem;
+  border-radius: 6px;
+  background-color: rgba(255, 255, 255, 0.07);
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.78rem;
+  overflow-wrap: anywhere;
+}
+
+.editGrid {
+  display: grid;
+  grid-template-columns: minmax(8rem, 0.7fr) repeat(4, minmax(8rem, 1fr));
+  gap: 0.75rem;
+}
+
+.editGrid label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  min-width: 0;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+
+.editGrid input,
+.editGrid select,
+.editGrid textarea {
+  min-width: 0;
+  width: 100%;
+  padding: 0.5rem 0.6rem;
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  border-radius: 6px;
+  background-color: rgba(0, 0, 0, 0.24);
+  color: #fff;
+  font: inherit;
+}
+
+.editGrid textarea {
+  resize: vertical;
+}
+
+.editGrid select option {
+  background-color: #3d2e39;
+}
+
+.editGrid input:focus,
+.editGrid select:focus,
+.editGrid textarea:focus {
+  outline: none;
+  border-color: #f472b6;
+  box-shadow: 0 0 0 1px rgba(244, 114, 182, 0.55);
+}
+
+.notesField {
+  grid-column: 1 / -1;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  margin-top: 0.85rem;
+}
+
+.actions button {
+  min-height: 2.15rem;
+  padding: 0.45rem 0.75rem;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff7fb;
+}
+
+.actions button:hover {
+  filter: brightness(1.16);
+  transform: translateY(-1px);
+}
+
+.dangerButton {
+  background-color: rgba(127, 29, 29, 0.42) !important;
+  color: #fecaca !important;
+}
+
+.saveButton {
+  background-color: #97057f !important;
+  color: #fff !important;
+}
+
+@media (max-width: 980px) {
+  .header {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .summaryGrid {
+    min-width: 0;
+  }
+
+  .scheduleStrip,
+  .editGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .summaryGrid,
+  .scheduleStrip,
+  .editGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .bookingTop {
+    flex-direction: column;
+  }
+
+  .actions {
+    justify-content: stretch;
+  }
+
+  .actions button {
+    flex: 1 1 9rem;
+  }
+}

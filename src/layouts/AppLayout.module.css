@@ -1,0 +1,24 @@
+.shell {
+  display: flex;
+  flex-direction: column;
+  height: 100dvh;
+  overflow: hidden;
+  background-color: #201a1f;
+}
+
+.layout {
+  display: flex;
+  flex: 1;
+  min-height: 0;
+  gap: 5px;
+  width: 100%;
+}
+
+.main {
+  flex: 1;
+  min-height: 0;
+  min-width: 0;
+  overflow: hidden;
+  padding: 1rem;
+  background-color: #201a1f;
+}

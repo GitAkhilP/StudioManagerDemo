@@ -1,0 +1,88 @@
+.base {
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease-out, transform 0.2s ease-out;
+}
+
+.base:hover {
+  outline: none;
+  background-color: rgb(226, 27, 193);
+  transform: translateX(-5px);
+}
+
+/* Variants */
+.primary {
+  background-color: #97057f;
+  color: #fff;
+  border-radius: 10px;
+}
+.primary:hover {
+  filter: brightness(1.08);
+}
+
+.secondary {
+  background-color: #b470e2;
+  color: #111;
+}
+.secondary:hover:not(:disabled) {
+  background-color: #b470e2;
+  filter: brightness(1.08);
+}
+
+.danger {
+  background-color: #ad0d50;
+  color: #fff;
+}
+.danger:hover:not(:disabled) {
+  filter: brightness(1.1);
+}
+
+/* Disabled state */
+.base:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+/* ========== TRANSFORM VARIANTS ========== */
+
+/* Default: text shifts left slightly */
+.transform_shift-left:hover:not(:disabled) {
+  transform: translateX(-5px);
+}
+
+.transform_shift-right:hover:not(:disabled) {
+  transform: translateX(5px);
+}
+.transform_shift-up:hover:not(:disabled) {
+  transform: translateY(-5px);
+}
+.transform_shift-down:hover:not(:disabled) {
+  transform: translateY(5px);
+}
+
+/* Button pops out (grows) */
+.transform_pop:hover:not(:disabled) {
+  transform: scale(1.05);
+}
+
+/* No movement — just color */
+.transform_none:hover:not(:disabled) {
+  transform: none;
+}
+
+/* Slide upward */
+.transform_up:hover:not(:disabled) {
+  transform: translateY(-4px);
+}
+
+/* Slight rotate */
+.transform_rotate:hover:not(:disabled) {
+  transform: rotate(-2deg);
+}
+
+/* Pulse animation */
+.transform_pulse:hover:not(:disabled) {
+  transform: scale(1.03);
+}

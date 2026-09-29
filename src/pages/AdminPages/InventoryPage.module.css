@@ -1,0 +1,137 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  height: 100%;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  min-height: 0;
+}
+
+.section:first-of-type {
+  flex-shrink: 0;
+}
+
+.section:last-of-type {
+  flex: 1;
+}
+
+.container {
+  flex: 1;
+  min-height: 0;
+  padding: 1.5rem 2rem;
+  background-color: rgba(0, 0, 0, 0.18);
+  color: white;
+  border-radius: 8px;
+
+  box-shadow: 15px 10px 18px rgba(253, 2, 119, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  overflow-y: auto;
+}
+
+.formCard {
+  background-color: rgba(255, 255, 255, 0.08);
+  padding: 1rem 1.25rem;
+  border-radius: 8px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+}
+.inventoryTitle {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.topRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 1rem;
+  max-width: 100%;
+}
+
+.formRow {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.formRowInline {
+  display: flex;
+  gap: 1rem;
+}
+
+.formRowInline > div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.page label {
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.page input {
+  padding: 0.4rem 0.5rem;
+  border-radius: 6px;
+  border: 1px solid rgba(249, 250, 251, 0.6);
+  background-color: rgba(17, 24, 39, 0.3);
+}
+
+.page input::placeholder {
+  outline: none;
+  border-color: #fde68a;
+}
+
+.page input:focus {
+  outline: none;
+  border-color: #f472b6;
+}
+
+.inventoryList {
+  list-style: none;
+  margin: 1rem 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.inventoryList > li {
+  transition: all 0.15s ease-in;
+}
+
+.inventoryList > li:hover {
+  transform: scale(1.01);
+  background: radial-gradient(
+    circle at bottom left,
+    rgba(226, 152, 133, 0.15),
+    rgba(79, 8, 107, 0.9)
+  );
+  filter: brightness(1.5);
+  cursor: pointer;
+}
+
+.error {
+  color: #fed7d7;
+  font-size: 0.85rem;
+}

@@ -1,0 +1,50 @@
+.pageShell {
+  min-width: 0;
+}
+
+.sectionPanel {
+  min-width: 0;
+}
+
+.statTile {
+  min-width: 0;
+}
+
+.statValue,
+.statLabel {
+  display: block;
+}
+
+.emptyState {
+  min-width: 0;
+}
+
+.emptyTitle {
+  display: block;
+}
+
+.emptyBody {
+  margin: 0.25rem 0 0;
+}
+
+.statusBadge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.keyValueRow,
+.totalsRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  min-width: 0;
+}
+
+.keyValueLabel,
+.keyValueValue,
+.totalsLabel,
+.totalsValue {
+  min-width: 0;
+}

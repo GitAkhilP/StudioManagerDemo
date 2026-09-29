@@ -1,0 +1,54 @@
+/* Whole row */
+.displayItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  width: 100%;
+  min-width: 0;
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+.itemIndex {
+  flex: 0 0 auto;
+  font-weight: 600;
+  color: #fdf2f8;
+}
+
+/* LEFT: name + description */
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  flex: 1;
+  min-width: 0;
+}
+
+.itemName {
+  font-weight: bold;
+  font-size: 16px;
+  color: #fdf2f8;
+}
+
+.itemDescription {
+  font-size: 14px;
+  color: #d1b3d1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; /* long text truncates nicely */
+}
+
+/* RIGHT: quantity + button */
+.right {
+  display: flex;
+  align-items: center;
+  flex: 0 0 auto;
+  gap: 0.75rem;
+}
+
+.itemQuantity {
+  font-size: 14px;
+  color: #fbb6ce;
+}

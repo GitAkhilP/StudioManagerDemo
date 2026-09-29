@@ -1,0 +1,53 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.5rem;
+}
+
+.header > .title,
+.title {
+  margin: 0;
+  line-height: 1.1;
+}
+
+.toggle {
+  display: inline-grid;
+  place-items: center;
+  width: 1.05rem;
+  height: 1.05rem;
+  padding: 0;
+  border: 1px solid rgba(249, 168, 212, 0.38);
+  border-radius: 999px;
+  background-color: rgba(151, 5, 127, 0.22);
+  color: #fbcfe8;
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.78rem;
+  font-weight: 800;
+  line-height: 1;
+  transition: background-color 0.18s ease-out, border-color 0.18s ease-out,
+    transform 0.18s ease-out;
+}
+
+.toggle:hover {
+  background-color: rgba(151, 5, 127, 0.38);
+  border-color: rgba(249, 168, 212, 0.62);
+  transform: translateY(-1px);
+}
+
+.toggle[aria-expanded="false"] {
+  background-color: rgba(14, 165, 233, 0.18);
+  border-color: rgba(125, 211, 252, 0.42);
+  color: #bae6fd;
+}
+
+.toggle[aria-expanded="false"]:hover {
+  background-color: rgba(14, 165, 233, 0.3);
+  border-color: rgba(125, 211, 252, 0.68);
+}
+
+.toggle:focus-visible {
+  outline: 2px solid #f472b6;
+  outline-offset: 2px;
+}
